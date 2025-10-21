@@ -1,27 +1,36 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Url = require('../models/Url');
-const shortid = require('shortid');
+const Url = require("../models/Url");
+const { nanoid } = require("nanoid");
 
-// Shorten a URL
-router.post('/shorten', async (req, res) => {
-  const { longUrl } = req.body;
-  const shortUrl = shortid.generate();
-  const url = new Url({ longUrl, shortUrl });
-  await url.save();
-  res.json({ shortUrl: `${req.headers.host}/${shortUrl}` });
+router.post("/shorten", async (req, res) => {
+  const { url } = req.body;
+  const shortUrl = nanoid(7);
+
+  try {
+    const newUrl = new Url({ url, shortUrl });
+    await newUrl.save();
+    res.json({ shortenedUrl: `${process.env.BASE_URL}/${shortUrl}` });
+  } catch (err) {
+    res.status(500).json({ error: "Server error" });
+  }
 });
 
-// Redirect from short URL to long URL
-router.get('/:shortUrl', async (req, res) => {
-  const url = await Url.findOne({ shortUrl: req.params.shortUrl });
-  if (url) {
-    url.clicks++;
-    await url.save();
-    return res.redirect(url.longUrl);
+router.get("/:shortUrl", async (req, res) => {
+  const { shortUrl } = req.params;
+
+  try {
+    const urlDoc = await Url.findOne({ shortUrl });
+    if (urlDoc) {
+      urlDoc.clicks += 1;
+      await urlDoc.save();
+      res.redirect(urlDoc.url);
+    } else {
+      res.status(404).send("URL not found");
+    }
+  } catch (err) {
+    res.status(500).send("Server error");
   }
-  res.status(404).json('URL not found');
 });
 
 module.exports = router;
-
