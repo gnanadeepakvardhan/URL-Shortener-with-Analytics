@@ -78,3 +78,23 @@ A full-stack web application that converts long URLs into short, shareable links
 
 ├─ 📘 README.md → Project overview and instructions  
 └─ 🚫 .gitignore → Ignore node_modules, .env, etc.
+
+## 🤝 Contributing
+
+Got ideas or improvements? Jump in!
+
+- Open issues  
+- Suggest features  
+- Fork and build your own version  
+
+**Contributions welcome 🙌**  
+⭐ Star the repo if you find it helpful!
+
+
+![Built by Pillikandla Gnana Deepak Vardhan](https://img.shields.io/badge/Built%20by-PGnanaDeepakVardhan-blueviolet)
+![VIT-AP University](https://img.shields.io/badge/VIT--AP%20University-Student-orange)
+![Render Deploy](https://img.shields.io/badge/Hosted%20on-Render-blue)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-yellow)
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
