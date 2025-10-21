@@ -74,10 +74,9 @@ A full-stack web application that converts long URLs into short, shareable links
 │  ├─ 📄 src  
 │  │  ├─ App.js → Main React component  
 │  │  └─ index.js → ReactDOM render logic  
-│  ├─ 📦 package.json → Frontend dependencies  
+│  ├─ 📦 package.json → Frontend dependencies    
 
-├─ 📘 README.md → Project overview and instructions  
-└─ 🚫 .gitignore → Ignore node_modules, .env, etc.
+└─ 📘 README.md → Project overview and instructions
 
 ## 🤝 Contributing
 
