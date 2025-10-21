@@ -6,8 +6,8 @@ A full-stack web application that converts long URLs into short, shareable links
 
 ## 🛰️ Live Demo
 
-- **Frontend**: [https://url-shortener-frontend-r6k.onrender.com](https://url-shortener-frontend-r6k.onrender.com)
-- **Backend**: [https://url-shortener-backend-17yz.onrender.com](https://url-shortener-backend-17yz.onrender.com)
+- **Frontend**: [https://url-shortener-frontend-r6k.onrender.com](https://url-shortner-frontend-i60k.onrender.com)
+- **Backend**: [https://url-shortener-backend-17yz.onrender.com](https://url-shortener-backend1-7zt1.onrender.com)
 
 ---
 
